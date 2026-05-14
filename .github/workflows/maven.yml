@@ -10,9 +10,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "Kornelia" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "Kornelia" ]
 
 jobs:
   build:
@@ -24,7 +24,7 @@ jobs:
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
-        java-version: '17'
+        java-version: '11'
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
