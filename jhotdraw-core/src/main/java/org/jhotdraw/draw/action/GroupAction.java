@@ -161,7 +161,6 @@ private void performUngroup() {
  * @return the list of restored child figures
  */
     public Collection<Figure> ungroupFigures(DrawingView view, CompositeFigure group) {
-// XXX - This code is redundant with UngroupAction
         LinkedList<Figure> figures = new LinkedList<>(group.getChildren());
         view.clearSelection();
         group.basicRemoveAllChildren();
