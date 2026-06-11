@@ -41,8 +41,10 @@ public class SendToBackAction extends AbstractZOrderAction {
 
     public static void sendToBack(DrawingView view, Collection<Figure> figures) {
         Drawing drawing = view.getDrawing();
+        int childCountBefore = drawing.getChildCount();
         for (Figure figure : figures) {
             drawing.sendToBack(figure);
         }
+        assert drawing.getChildCount() == childCountBefore;
     }
 }

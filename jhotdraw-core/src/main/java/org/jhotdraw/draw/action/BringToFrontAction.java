@@ -41,8 +41,10 @@ public class BringToFrontAction extends AbstractZOrderAction {
 
     public static void bringToFront(DrawingView view, Collection<Figure> figures) {
         Drawing drawing = view.getDrawing();
+        int childCountBefore = drawing.getChildCount();
         for (Figure figure : drawing.sort(figures)) {
             drawing.bringToFront(figure);
         }
+        assert drawing.getChildCount() == childCountBefore;
     }
 }
