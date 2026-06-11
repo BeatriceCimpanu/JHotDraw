@@ -22,6 +22,7 @@ public class UngroupAction extends GroupAction {
 
     private static final long serialVersionUID = 1L;
     public static final String ID = "edit.ungroupSelection";
+    private static final String LABELS_BUNDLE = "org.jhotdraw.draw.Labels";
     /**
      * Creates a new instance.
      */
@@ -32,14 +33,14 @@ public class UngroupAction extends GroupAction {
      */
     public UngroupAction(DrawingEditor editor) {
         super(editor, new GroupFigure(), false);
-        ResourceBundleUtil labels = ResourceBundleUtil.getBundle("org.jhotdraw.draw.Labels");
+        ResourceBundleUtil labels = ResourceBundleUtil.getBundle(LABELS_BUNDLE);
         labels.configureAction(this, ID);
         updateEnabledState();
     }
 
     public UngroupAction(DrawingEditor editor, CompositeFigure prototype) {
         super(editor, prototype, false);
-        ResourceBundleUtil labels = ResourceBundleUtil.getBundle("org.jhotdraw.draw.Labels");
+        ResourceBundleUtil labels = ResourceBundleUtil.getBundle(LABELS_BUNDLE);
         labels.configureAction(this, ID);
         updateEnabledState();
     }
